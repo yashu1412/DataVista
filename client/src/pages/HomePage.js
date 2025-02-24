@@ -99,14 +99,6 @@ const HomePage = () => {
                                                 >
                                                    {person.title} {person.name}
                                                 </button>
-                                                {dropdownOpen === index && (
-                                                    <div
-                                                        ref={(el) => (dropdownRefs.current[index] = el)}
-                                                        className="absolute left-0 mt-2 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md shadow-lg z-50 p-3 w-auto min-w-[120px] md:min-w-[150px] max-w-sm"
-                                                    >
-                                                        <p className="text-xs md:text-md text-gray-700 dark:text-gray-300 break-words">{person.email}</p>
-                                                    </div>
-                                                )}
                                             </div>
                                         </div>
                                     </td>
