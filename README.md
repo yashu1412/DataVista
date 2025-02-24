@@ -1,56 +1,113 @@
-The build command for your **server** depends on the runtime environment and how you plan to deploy it. If your **server** is built with **Node.js and Express**, you typically don't need a build step like in frontend projects. However, if you're using TypeScript or Babel, you might need to transpile your code.
-LIVE SITE : https://data-vista-gules.vercel.app/
-### **Common Build Commands for the Server**  
+# 📌 DATAVISTA 
 
-#### 1️⃣ **For a Basic Node.js Server (No Build Needed)**
-If your server is written in plain JavaScript (`server.js` or `index.js`), you don’t need a build step. You just run:
+A full-stack application with a **React.js (client)** and **Node.js/Express (server)** setup, featuring a database for managing users and their data.
 
+---
+
+## 📂 Project Structure
+```
+project-root/
+│-- client/     # Frontend (React.js)
+│-- server/     # Backend (Node.js/Express)
+│-- README.md   # Project documentation
+```
+
+---
+
+## 🚀 Getting Started
+### 1️⃣ Clone the Repository
 ```sh
-npm run dev  # Starts the server in development mode
-npm start    # Starts the server in production mode
+git clone https://github.com/yashu1412/DataVista.git
+cd DataVista
 ```
 
-#### 2️⃣ **For a JavaScript-Based Server**
-If your server is written in **TypeScript**, you need to compile it before running:
+---
 
+## 🖥️ Server Setup (Backend)
+### 🔹 Navigate to Server Directory
 ```sh
-npm run build   # Compiles TypeScript to JavaScript
-npm start       # Runs the compiled code
+cd server
 ```
 
-You should have a `package.json` script like:
-
-```json
-"scripts": {
-  "dev": "nodemon src/index.ts",
-  "build": "tsc",
-  "start": "node dist/index.js"
-}
-```
-
-#### 3️⃣ **For a Babel-Based Server**
-If you're using **Babel** to transpile ES6+ code:
-
+### 🔹 Install Dependencies
 ```sh
-npm run build   # Transpiles the code
-npm start       # Runs the built server
+npm install
 ```
 
-The `package.json` scripts:
-
-```json
-"scripts": {
-  "dev": "nodemon src/index.js",
-  "build": "babel src -d dist",
-  "start": "node dist/index.js"
-}
+### 🔹 Configure Environment Variables
+Create a `.env` file in the `server` directory and add the necessary environment variables:
+```sh
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
 ```
 
-### **Final Deployment Command**
-After building the server (`npm run build` if using TypeScript or Babel), you can deploy the production version with:
-
+### 🔹 Start the Server
 ```sh
 npm start
 ```
+The server will run on `http://localhost:5000`.
 
-Let me know if you need specific commands based on your setup! 🚀
+---
+
+## 🎨 Client Setup (Frontend)
+### 🔹 Navigate to Client Directory
+```sh
+cd client
+```
+
+### 🔹 Install Dependencies
+```sh
+npm install
+```
+
+### 🔹 Configure Environment Variables
+Create a `.env` file in the `client` directory and add:
+```sh
+REACT_APP_BASE_URL=http://localhost:5000
+```
+
+### 🔹 Start the Client
+```sh
+npm start
+```
+The client will run on `http://localhost:3000`.
+
+---
+
+## 🛠️ Technologies Used
+### 🌐 Frontend
+- React.js
+- Tailwind CSS
+- React Router
+
+### 🔧 Backend
+- Node.js
+- Express.js
+- MongoDB (Mongoose)
+
+---
+
+## 📌 Features
+✅ User Authentication (Login/Register)
+✅ Fully Responsive UI
+
+---
+
+## 🤝 Contributing
+Pull requests are welcome! Follow these steps:
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature-name`)
+3. Commit your changes (`git commit -m "Added feature X"`)
+4. Push to the branch (`git push origin feature-name`)
+5. Open a Pull Request
+
+---
+
+## 📄 License
+This project is licensed under the **MIT License**.
+
+---
+
+## 📞 Contact
+For issues or suggestions, reach out via [your-email@example.com](mailto:your-email@example.com).
+
