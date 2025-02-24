@@ -106,8 +106,4 @@ Pull requests are welcome! Follow these steps:
 ## 📄 License
 This project is licensed under the **MIT License**.
 
----
-
-## 📞 Contact
-For issues or suggestions, reach out via [your-email@example.com](mailto:your-email@example.com).
 
