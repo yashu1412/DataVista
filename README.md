@@ -43,7 +43,7 @@ MONGO_URI=your_mongodb_connection_string
 
 ### 🔹 Start the Server
 ```sh
-npm start
+npm run dev
 ```
 The server will run on `http://localhost:5000`.
 
